@@ -15,6 +15,7 @@
 ## 升级DNSMASQ-FULL
 
 若已完成升级请略过该步骤。
+
 为避免自带DNSMASQ卸载后无法解析域名，需同时执行删除DNSMASQ和安装DNSMASQ-FULL。
 ```shell
 opkg update
@@ -29,6 +30,7 @@ opkg remove dnsmasq && opkg install dnsmasq-full
 ```shell
 mkdir -p /etc/config/v2ray
 ```
+
 将v2ray主程序和配置文件（除主程序外，全部位于v2ray文件夹中）复制到/etc/config/v2ray目录：
 ```shell
 v2ray           # v2ray主程序
@@ -39,6 +41,7 @@ gw.ips          # 一些园外IP地址（段），用于配置ipset走V2Ray
 ad.ips          # 一些广告IP地址，用于配置ipset直接拒绝
 client.json     # v2ray配置文件，填入自己的服务器信息
 ```
+
 关于client.json，inbound部分主要监听12345端口，使用任意门（dokodemo-door）协议；outbound部分则可参考V2RayN软件导出的配置文件。
 
 创建服务，直接链接到/etc/init.d即可，添加可执行权限。
@@ -60,6 +63,7 @@ opkg install https-dns-proxy
 /etc/config/https-dns-proxy    # 配置文件，使用https-dns-porxy/config/https-dns-proxy替换
 ```
 替换启动脚本的目的是取消启动时自动更新dnsmasq DNS转发字段功能。
+
 替换配置文件的目的是将原有的Google、CloudFlare服务更换为可用的Rubyfish（国内）服务。
 
 
