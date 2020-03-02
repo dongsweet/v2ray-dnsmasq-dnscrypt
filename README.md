@@ -1,7 +1,7 @@
-# v2ray-dnsmasq-doh Step-by-step
+# V2Ray + Dnsmasq + DoH 上网 Step-by-step
 
 本方案记录在OpenWRT路由器上搭建V2Ray客户端，实现网内自动使用该网络的步骤。
-本文主要借鉴了felix-fly的[文章](https://github.com/felix-fly/v2ray-openwrt/blob/master/README.md)，表示感谢！
+本文主要借鉴了felix-fly的[文章](https://github.com/felix-fly/v2ray-openwrt/blob/master/README.md)，也可见[本地README_ORIGINAL.md](README_ORIGINAL.md)，表示感谢！
 
 ## 主要原理
 
