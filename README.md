@@ -29,7 +29,7 @@ opkg remove dnsmasq && opkg install dnsmasq-full
 ```shell
 mkdir -p /etc/config/v2ray
 ```
-将v2ray主程序和配置文件复制到v2ray目录：
+将v2ray主程序和配置文件（除主程序外，全部位于v2ray文件夹中）复制到/etc/config/v2ray目录：
 ```shell
 v2ray           # v2ray主程序
 v2ray.service   # v2ray服务，将创建ipset和iptables命令集成在该文件中
@@ -37,7 +37,7 @@ gw.hosts        # 一些园外网站列表，用于告知dnsmasq使用单独的
 ad.hosts        # 一些广告网站列表，用于告知dnsmasq直接免解析
 gw.ips          # 一些园外IP地址（段），用于配置ipset走V2Ray
 ad.ips          # 一些广告IP地址，用于配置ipset直接拒绝
-client.json     # v2ray配置文件，可参考client-doh.json，填入自己的服务器信息
+client.json     # v2ray配置文件，填入自己的服务器信息
 ```
 关于client.json，inbound部分主要监听12345端口，使用任意门（dokodemo-door）协议；outbound部分则可参考V2RayN软件导出的配置文件。
 
