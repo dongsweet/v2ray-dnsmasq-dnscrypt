@@ -8,7 +8,7 @@ config https-dns-proxy
 #	option listen_port '1054'
 #	option user 'nobody'
 #	option group 'nogroup'
-#   option dns_servers '1.1.1.1,1.0.0.1'
+#	option dns_servers '1.1.1.1,1.0.0.1'
 #	option resolver_url 'https://cloudflare-dns.com/dns-query'
 #	option subnet_addr ''
 #	option proxy_server ''
