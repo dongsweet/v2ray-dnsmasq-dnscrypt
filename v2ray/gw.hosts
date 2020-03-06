@@ -1,3 +1,4 @@
+server=/archiveofourown.org/127.0.0.1#1053
 server=/030buy.com/127.0.0.1#1053
 server=/0rz.tw/127.0.0.1#1053
 server=/1-apple.com.tw/127.0.0.1#1053
@@ -5371,6 +5372,7 @@ server=/zyzc9.com/127.0.0.1#1053
 server=/zzcartoon.com/127.0.0.1#1053
 server=/zzcloud.me/127.0.0.1#1053
 server=/zzux.com/127.0.0.1#1053
+ipset=/archiveofourown.org/gw
 ipset=/030buy.com/gw
 ipset=/0rz.tw/gw
 ipset=/1-apple.com.tw/gw
