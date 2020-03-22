@@ -1,3 +1,7 @@
+server=/mvnrepository.com/127.0.0.1#1053
+server=/microsoft.com/127.0.0.1#1053
+server=/oracle.com/127.0.0.1#1053
+server=/apache.org/127.0.0.1#1053
 server=/archiveofourown.org/127.0.0.1#1053
 server=/030buy.com/127.0.0.1#1053
 server=/0rz.tw/127.0.0.1#1053
@@ -2371,7 +2375,6 @@ server=/ipredator.se/127.0.0.1#1053
 server=/iptv.com.tw/127.0.0.1#1053
 server=/iptvbin.com/127.0.0.1#1053
 server=/ipvanish.com/127.0.0.1#1053
-server=/iqiyi.com/127.0.0.1#1053
 server=/iredmail.org/127.0.0.1#1053
 server=/irib.ir/127.0.0.1#1053
 server=/ironpython.net/127.0.0.1#1053
@@ -5372,6 +5375,19 @@ server=/zyzc9.com/127.0.0.1#1053
 server=/zzcartoon.com/127.0.0.1#1053
 server=/zzcloud.me/127.0.0.1#1053
 server=/zzux.com/127.0.0.1#1053
+##################
+#### Microsoft - Begin ####
+ipset=/livefilestore.com/gw
+ipset=/onedriver.com/gw
+ipset=/office365.com/gw
+ipset=/live.net/gw
+ipset=/microsoft.com/gw
+#### Microsoft - E N D ####
+ipset=/usenix.org/gw
+ipset=/digitalocean.com/gw
+ipset=/mvnrepository.com/gw
+ipset=/oracle.com/gw
+ipset=/apache.org/gw
 ipset=/archiveofourown.org/gw
 ipset=/030buy.com/gw
 ipset=/0rz.tw/gw
@@ -7745,7 +7761,6 @@ ipset=/ipredator.se/gw
 ipset=/iptv.com.tw/gw
 ipset=/iptvbin.com/gw
 ipset=/ipvanish.com/gw
-ipset=/iqiyi.com/gw
 ipset=/iredmail.org/gw
 ipset=/irib.ir/gw
 ipset=/ironpython.net/gw

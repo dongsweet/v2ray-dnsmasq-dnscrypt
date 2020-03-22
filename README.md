@@ -74,7 +74,8 @@ DNSMASQ默认使用/etc/dnsmasq.d目录作为扩充配置目录，该目录可�
 ```shell
 mkdir -p /etc/dnsmasq.d
 ln -s /etc/config/v2ray/gw.hosts /etc/dnsmasq.d/gw.hosts
-ln -s /etc/config/v2ray/ad.hosts /etc/dnsmasq.d/ad.hosts
+# ln -s /etc/config/v2ray/ad.hosts /etc/dnsmasq.d/ad.hosts
+# 此AD阻断文件可能造成优酷、微博视频等断流，暂停使用
 ```
 
 ## 启动服务
