@@ -1,0 +1,31 @@
+#!/bin/sh /etc/rc.common
+# "new(er)" style init script
+# Look at /lib/functions/service.sh on a running system for explanations of what other SERVICE_
+# options you can use, and when you might want them.
+
+START=80
+ROOT=/etc/config/v2ray
+SERVICE_WRITE_PID=1
+SERVICE_DAEMONIZE=1
+
+start() {
+  service_start /usr/bin/v2ray --config $ROOT/config.json
+  ipset -R < /etc/config/v2ray/cn.ips
+  iptables -t nat -N V2RAY
+  iptables -t nat -A V2RAY -m set --match-set cn dst -j RETURN
+  iptables -t nat -A V2RAY -p tcp --dport 22:1024 -j REDIRECT --to-port 12345
+  iptables -t nat -A PREROUTING -j V2RAY
+}
+
+stop() {
+  service_stop $ROOT/v2ray
+  iptables -t nat -D PREROUTING -j V2RAY
+  iptables -t nat -F V2RAY
+  iptables -t nat -X V2RAY
+  ipset destroy cn
+}
+
+reload() {
+  /usr/bin/wget http://s1.sweethome.vip:27891/cn.ips -O $ROOT/cn.ips
+  restart
+}

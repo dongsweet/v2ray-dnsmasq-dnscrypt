@@ -9,7 +9,7 @@ SERVICE_WRITE_PID=1
 SERVICE_DAEMONIZE=1
 
 start() {
-  service_start $ROOT/v2ray
+  service_start /usr/bin/v2ray --config $ROOT/config.json
   ipset -! -R < /etc/config/v2ray/ad.ips
   ipset -R < /etc/config/v2ray/gw.ips
   iptables -t filter -A INPUT -m set --match-set ad dst -j REJECT
