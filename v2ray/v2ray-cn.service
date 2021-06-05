@@ -15,10 +15,12 @@ start() {
   iptables -t nat -A V2RAY -m set --match-set cn dst -j RETURN
   iptables -t nat -A V2RAY -p tcp --dport 22:1024 -j REDIRECT --to-port 12345
   iptables -t nat -A PREROUTING -j V2RAY
+  iptables -t nat -A OUTPUT -j V2RAY
 }
 
 stop() {
   service_stop $ROOT/v2ray
+  iptables -t nat -D OUTPUT -j V2RAY
   iptables -t nat -D PREROUTING -j V2RAY
   iptables -t nat -F V2RAY
   iptables -t nat -X V2RAY
